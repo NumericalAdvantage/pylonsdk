@@ -1,0 +1,43 @@
+# This file is part of project link.developers/pylonsdk.
+# It is copyrighted by the contributors recorded in the version control history of the file,
+# available from its original location https://gitlab.com/link.developers/recipes-externals/pylonsdk.
+
+# SPDX-License-Identifier: MPL-2.0
+
+package:
+  name: "pylonsdk"
+  version: "5.2.0"
+
+source:
+    - url: https://hydrogen.draive.com/files/link_dev/pylon-5.2.0.13457-x86_64.tar.gz # [linux and x86_64]
+    - url: https://hydrogen.draive.com/files/link_dev/pylon-5.2.0.13457-arm64.tar.gz # [linux and aarch64]
+    - url: https://hydrogen.draive.com/files/link_dev/pylon-5-20191104T161031Z-001.zip # [win]
+
+build:
+  number: {{ BUILD_VERSION }}
+
+requirements:
+  build:
+    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
+
+  host:
+
+  run:
+
+
+test:
+  requires:
+    - cmake
+    - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
+    
+  files:
+    - pylon_test/CMakeLists.txt
+    - pylon_test/main.cpp
+
+
+about:
+  home: "https://www.baslerweb.com/en/sales-support/downloads/software-downloads/"
+  license: "Proprietary"
+  summary: "Provides an API to command and control Basler machine vision cameras."
