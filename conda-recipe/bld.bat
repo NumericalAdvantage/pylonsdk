@@ -13,15 +13,6 @@ SET PYLONSDK_INCLUDE_TARGET=%LIBRARY_PREFIX%\include\
 
 
 mkdir %PYLONSDK_BIN_TARGET%
-REM xcopy "Runtime\x64\GCBase_MD_VC141_v3_1_Basler_pylon.dll" %PYLONSDK_BIN_TARGET%
-REM xcopy "Runtime\x64\GenApi_MD_VC141_v3_1_Basler_pylon.dll" %PYLONSDK_BIN_TARGET%
-REM xcopy "Runtime\x64\PylonBase_v5_2.dll" %PYLONSDK_BIN_TARGET%
-REM xcopy "Runtime\x64\PylonUtility_v5_2.dll" %PYLONSDK_BIN_TARGET%
-REM xcopy "Runtime\x64\log4cpp_MD_VC141_v3_1_Basler_pylon.dll" %PYLONSDK_BIN_TARGET%
-REM xcopy "Runtime\x64\NodeMapData_MD_VC141_v3_1_Basler_pylon.dll" %PYLONSDK_BIN_TARGET%
-REM xcopy "Runtime\x64\Log_MD_VC141_v3_1_Basler_pylon.dll" %PYLONSDK_BIN_TARGET%
-REM xcopy "Runtime\x64\MathParser_MD_VC141_v3_1_Basler_pylon.dll" %PYLONSDK_BIN_TARGET%
-REM xcopy "Runtime\x64\XmlParser_MD_VC141_v3_1_Basler_pylon.dll" %PYLONSDK_BIN_TARGET%
 xcopy /s "Runtime\x64\*" %PYLONSDK_BIN_TARGET%
 
 mkdir %PYLONSDK_LIB_TARGET%
